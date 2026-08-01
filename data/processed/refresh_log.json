@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2026-08-01T13:36:14.813852+00:00",
+    "prev_date": "2026-06-29",
+    "new_date": "2026-08-01",
+    "rows_added": 0,
+    "status": "skipped_weekend",
+    "regime": null,
+    "confidence": null
+  }
+]

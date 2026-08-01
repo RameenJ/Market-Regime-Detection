@@ -1,0 +1,7 @@
+2026-08-01 13:36:14  INFO  ============================================================
+2026-08-01 13:36:14  INFO  Daily refresh started
+2026-08-01 13:36:14  INFO  ============================================================
+2026-08-01 13:36:14  INFO  Loading existing data...
+2026-08-01 13:36:14  INFO    Last date in dataset : 2026-06-29
+2026-08-01 13:36:14  INFO    Today                : 2026-08-01
+2026-08-01 13:36:14  INFO  Weekend — no market data expected. Exiting cleanly.
