@@ -1,0 +1,5 @@
+Regime,Days,% of History,Episodes,Avg Duration (days),Avg VIX,Avg Realized Vol,Avg CPI YoY,Avg Credit Spread,Avg Philly Fed
+High-Volatility,861,14.6%,12,72,32.5,32.2%,1.9%,3.55pp,-10.6
+Risk-Off,2412,41.0%,9,268,16.8,12.1%,1.7%,2.61pp,13.9
+Risk-On,1567,26.6%,12,131,14.5,10.5%,3.4%,1.73pp,11.3
+Inflation-Driven,1045,17.8%,13,80,20.4,17.5%,4.1%,2.05pp,4.4

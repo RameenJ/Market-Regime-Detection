@@ -1,0 +1,67 @@
+name: Daily Regime Refresh
+
+on:
+  # Run at 22:30 UTC (after US market close at 21:00 UTC / 4pm ET + buffer)
+  # Monday–Friday only
+  schedule:
+    - cron: "30 22 * * 1-5"
+
+  # Allow manual trigger from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      # ── 1. Check out the repo ──────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Need full history so git can push the updated data files back
+          fetch-depth: 0
+
+      # ── 2. Set up Python ───────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      # ── 3. Install dependencies ────────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. Run the refresh script ──────────────────────────────────────────
+      #    FRED_API_KEY is stored as a GitHub Actions secret (never in code)
+      - name: Run daily refresh
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python refresh.py
+
+      # ── 5. Commit and push updated data files ─────────────────────────────
+      #    Only commits if there are actually changes (new trading day)
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            data/processed/us_combined_daily.parquet \
+            data/processed/us_features_daily.parquet \
+            data/processed/us_features_zscored.parquet \
+            data/processed/us_regime_labels.parquet \
+            data/processed/us_regime_labels.csv \
+            data/processed/refresh_log.json \
+            refresh.log
+
+          # Only commit if something changed
+          git diff --cached --quiet && echo "Nothing to commit" || \
+            git commit -m "chore: daily regime refresh $(date -u '+%Y-%m-%d')"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
