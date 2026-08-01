@@ -13,6 +13,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write   # needed to commit and push data files back to the repo
 
     steps:
       # ── 1. Check out the repo ──────────────────────────────────────────────
