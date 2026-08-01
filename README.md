@@ -348,5 +348,4 @@ This project is built for portfolio and research demonstration purposes. Nothing
 
 ---
 
-*Built by Rameen — Final-year AI student at COMSATS University Islamabad*  
-*Targeting data science and quant research roles in Germany*
+*Built by Rameen — BS Artificial Intelligence, pursuing Masters in Data Science*  
