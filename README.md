@@ -2,7 +2,7 @@
 
 A quant-research-style system that classifies the US macro-financial environment into four interpretable regimes — **Risk-On**, **Risk-Off**, **High-Volatility**, and **Inflation-Driven** — using unsupervised machine learning on 16 engineered macro and market features.
 
-> **Live dashboard →** *(add your Streamlit Community Cloud URL here)*  
+> **Live dashboard →** https://market-regime-detection-jp7kvkqycthtim5jbfgmmw.streamlit.app/  
 > **Data:** Yahoo Finance · FRED (Federal Reserve Economic Data)  
 > **Update cadence:** Automatic daily refresh via GitHub Actions (weekdays, 22:30 UTC)
 
