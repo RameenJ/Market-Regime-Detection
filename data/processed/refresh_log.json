@@ -7,5 +7,14 @@
     "status": "skipped_weekend",
     "regime": null,
     "confidence": null
+  },
+  {
+    "timestamp": "2026-08-03T23:33:39.918960+00:00",
+    "prev_date": "2026-06-29",
+    "new_date": "2026-05-22",
+    "rows_added": 24,
+    "status": "success",
+    "regime": "Risk-On",
+    "confidence": 0.9995
   }
 ]
