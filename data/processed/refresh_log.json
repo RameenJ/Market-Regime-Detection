@@ -142,5 +142,14 @@
     "status": "success",
     "regime": "Risk-On",
     "confidence": 0.9999
+  },
+  {
+    "timestamp": "2026-08-24T22:50:56.324429+00:00",
+    "prev_date": "2026-08-21",
+    "new_date": "2026-08-24",
+    "rows_added": 1,
+    "status": "success",
+    "regime": "Risk-On",
+    "confidence": 0.9999
   }
 ]
