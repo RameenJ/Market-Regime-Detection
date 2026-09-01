@@ -187,5 +187,14 @@
     "status": "skipped_weekend",
     "regime": null,
     "confidence": null
+  },
+  {
+    "timestamp": "2026-09-01T01:20:31.299944+00:00",
+    "prev_date": "2026-08-27",
+    "new_date": "2026-08-31",
+    "rows_added": 2,
+    "status": "success",
+    "regime": "Risk-On",
+    "confidence": 1.0
   }
 ]
