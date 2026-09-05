@@ -223,5 +223,14 @@
     "status": "success",
     "regime": "Risk-On",
     "confidence": 1.0
+  },
+  {
+    "timestamp": "2026-09-05T00:13:32.676731+00:00",
+    "prev_date": "2026-09-03",
+    "new_date": "2026-09-05",
+    "rows_added": 0,
+    "status": "skipped_weekend",
+    "regime": null,
+    "confidence": null
   }
 ]
