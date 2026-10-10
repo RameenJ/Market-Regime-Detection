@@ -448,5 +448,14 @@
     "status": "success",
     "regime": "Risk-On",
     "confidence": 1.0
+  },
+  {
+    "timestamp": "2026-10-10T01:50:26.634183+00:00",
+    "prev_date": "2026-10-08",
+    "new_date": "2026-10-10",
+    "rows_added": 0,
+    "status": "skipped_weekend",
+    "regime": null,
+    "confidence": null
   }
 ]
